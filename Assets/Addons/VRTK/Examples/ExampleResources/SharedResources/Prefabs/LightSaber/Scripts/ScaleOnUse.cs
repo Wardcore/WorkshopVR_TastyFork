@@ -45,6 +45,7 @@
 
         protected virtual void InteractableObjectUnused(object sender, InteractableObjectEventArgs e)
         {
+            print("unuse saber");
             CancelScale();
             scaleRoutine = StartCoroutine(ScaleRoutine(objectToScale.transform.localScale, unuseScale));
         }
