@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using VRTK;
 
-public class Scissors : MonoBehaviour {
+public class Lighter : MonoBehaviour {
 
     public VRTK_InteractableObject linkedObject;
-	private Animator m_anim;
+	public GameObject m_flame;
 
 	protected virtual void OnEnable()
 	{
+		m_flame.SetActive(false);
 		linkedObject = (linkedObject == null ? GetComponent<VRTK_InteractableObject>() : linkedObject);
-		m_anim = GetComponent<Animator>();
 
 		if (linkedObject != null)
 		{
@@ -30,19 +30,11 @@ public class Scissors : MonoBehaviour {
 
 	protected virtual void InteractableObjectUsed(object sender, InteractableObjectEventArgs e)
 	{
-		m_anim.SetBool("CutBool", true);
+		m_flame.SetActive(true);
 	}
 
 	protected virtual void InteractableObjectUnused(object sender, InteractableObjectEventArgs e)
     {
-		m_anim.SetBool("CutBool", false);
+		m_flame.SetActive(false);
     }
-
-	void OnTriggerEnter(Collider other)
-	{
-		if(other.tag == "Cutable"){
-			print("cutable");
-			other.gameObject.GetComponent<RopePart>().BreakLink();
-		}
-	}
 }
