@@ -30,16 +30,19 @@ public class Scissors : MonoBehaviour {
 
 	protected virtual void InteractableObjectUsed(object sender, InteractableObjectEventArgs e)
 	{
-		print("use scizzors");
-		//m_anim.SetTrigger("Cut");
 		m_anim.SetBool("CutBool", true);
 	}
 
 	protected virtual void InteractableObjectUnused(object sender, InteractableObjectEventArgs e)
     {
-		print("use scizzors");
-		//m_anim.SetTrigger("Cut");
 		m_anim.SetBool("CutBool", false);
     }
 
+	void OnTriggerEnter(Collider other)
+	{
+		if(other.tag == "Cutable"){
+			print("cutable");
+			other.gameObject.GetComponent<RopePart>().BreakLink();
+		}
+	}
 }
