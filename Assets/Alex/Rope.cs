@@ -21,6 +21,7 @@ public class Rope : MonoBehaviour {
 		for (int i = 0; i < m_childCount; i++)
 		{	
 			if(transform.transform.GetChild(i).gameObject.GetComponent<CharacterJoint>() == null){
+				m_line.positionCount = i;
 				break;
 			}
 			m_childPos[i] = transform.GetChild(i).position;
