@@ -11,7 +11,8 @@ public class Rope : MonoBehaviour {
 	void  Awake() 
 	{
 		m_line = GetComponent<LineRenderer>();
-
+		
+		m_line.enabled = true;
 		m_line.useWorldSpace = true;
 		m_line.startWidth = m_lineSize;
 		m_line.endWidth = m_lineSize;
