@@ -632,7 +632,7 @@ MonoBehaviour:
   grabAttachMechanicScript: {fileID: 114443350233865042}
   secondaryGrabActionScript: {fileID: 114105781376372454}
   isUsable: 1
-  holdButtonToUse: 0
+  holdButtonToUse: 1
   useOnlyIfGrabbed: 0
   pointerActivatesUseAction: 0
   useOverrideButton: 9
