@@ -26,6 +26,9 @@ public class Timer : MonoBehaviour {
     [Header("CetteClockEstElleAGaucheDeLaBombe?")]
     public bool left;
     [Space]
+    [Header("AnimationRobot")]
+    public Animator robot_animator;
+    [Space]
     [Header("Debug")]
     public Material red;
     public Material orange;
@@ -35,6 +38,7 @@ public class Timer : MonoBehaviour {
     private float timeleft;
     private float timepercentage;
     public float timeMax;
+    private int counterModul;
 
     private const float secondsToDegrees = 360f;
 
@@ -61,10 +65,16 @@ public class Timer : MonoBehaviour {
         {
             clock.localRotation = Quaternion.Euler((timepercentage * -secondsToDegrees) * 0.75f, 0f, 0f);
         }
+
+        //-----------
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             OnTimeBonus();
         }
+
+        //-----------
+
         if (timepercentage < timerpercent)
         {
             if (Tictictic != null)
@@ -85,10 +95,21 @@ public class Timer : MonoBehaviour {
 
     public void OnTimeBonus()
     {
+        counterModul++;
         timeleft += timeBonus;
-        if (timeleft > timeMax)
+
+        if (counterModul == 3)
+        {
+            OnForkRevealed();
+        }
+        else if (timeleft > timeMax)
         {
             timeleft = timeMax;
         }
+    }
+
+    void OnForkRevealed()
+    {
+        //robot_animator.Play("Robot");
     }
 }
