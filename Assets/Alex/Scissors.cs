@@ -38,11 +38,11 @@ public class Scissors : MonoBehaviour {
 		m_anim.SetBool("CutBool", false);
     }
 
-	void OnTriggerEnter(Collider other)
+	/*void OnTriggerEnter(Collider other)
 	{
 		if(other.tag == "Cutable"){
 			print("cutable");
 			other.gameObject.GetComponent<RopePart>().BreakLink();
 		}
-	}
+	}*/
 }

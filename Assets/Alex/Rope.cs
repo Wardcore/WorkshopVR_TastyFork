@@ -4,23 +4,43 @@ using UnityEngine;
 
 public class Rope : MonoBehaviour {
 
+	public Material m_lineMat;
+	public float m_lineSize = 0.02f;
 	private LineRenderer m_line;
-    private int m_childCount;
-
-	void Start () 
+    public int m_childCount;
+	void  Awake() 
 	{
 		m_line = GetComponent<LineRenderer>();
-
+		
+		m_line.enabled = true;
+		m_line.useWorldSpace = true;
+		m_line.startWidth = m_lineSize;
+		m_line.endWidth = m_lineSize;
+		m_line.material = m_lineMat;
+		//
 		m_childCount = transform.childCount;
 		m_line.positionCount = m_childCount;
+
+		//Set ID
+		for (int i = 0; i < m_childCount; i++)
+		{		
+			GameObject child = transform.GetChild(i).gameObject;
+			//print("child : " + i + " = " + transform.GetChild(i).name);
+			if(child.GetComponent<RopePart>() != null){
+				child.GetComponent<CharacterJoint>().connectedBody = transform.GetChild(i-1).GetComponent<Rigidbody>();
+				child.GetComponent<MeshRenderer>().enabled = false;
+				child.GetComponent<RopePart>().ID = i;
+			}
+		}
 	}
 	
 	void Update () {
 
 		Vector3[] m_childPos = new Vector3[m_childCount];
+
 		for (int i = 0; i < m_childCount; i++)
 		{	
-			if(transform.transform.GetChild(i).gameObject.GetComponent<CharacterJoint>() == null){
+			if(transform.GetChild(i).gameObject.GetComponent<Joint>() == null){
 				m_line.positionCount = i;
 				break;
 			}
@@ -35,5 +55,17 @@ public class Rope : MonoBehaviour {
 		{
 			child.GetComponent<Collider>().enabled = false;
 		}
+	}
+
+	public Vector3[] SetLine(int ID){
+		Vector3[] TabPos = new Vector3[m_childCount - ID];
+
+		//print("Tab length = " + TabPos.Length + ", ID = " + ID);
+		for (int i = ID; i < m_childCount; i++)
+		{
+			TabPos[i - ID] =  transform.GetChild(i).position;
+			//print("Pos " + i + " = " + TabPos[i - ID]);
+		}
+		return TabPos;
 	}
 }
