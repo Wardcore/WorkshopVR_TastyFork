@@ -8,6 +8,7 @@ TagManager:
   - Flame
   - Scissors
   - Cutable
+  - Cigar
   layers:
   - Default
   - TransparentFX
@@ -18,8 +19,8 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
+  - Cutable
+  - Lighter
   - 
   - 
   - 
