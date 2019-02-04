@@ -9,6 +9,7 @@ TagManager:
   - Scissors
   - Cutable
   - Tapette
+  - BoxHandCode
   layers:
   - Default
   - TransparentFX
