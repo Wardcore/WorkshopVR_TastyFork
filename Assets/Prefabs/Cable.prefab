@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 54923139988078710}
   - component: {fileID: 144120991497477178}
   - component: {fileID: 114007187006604738}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: RopePart_5 (4)
   m_TagString: Cutable
   m_Icon: {fileID: 0}
@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 54068473173050030}
   - component: {fileID: 144062438379626116}
   - component: {fileID: 114590386637877314}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: RopePart_2
   m_TagString: Cutable
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 54313222936678918}
   - component: {fileID: 144219095907786934}
   - component: {fileID: 114209880508203978}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: RopePart_5 (5)
   m_TagString: Cutable
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 54353139457439150}
   - component: {fileID: 144199704493232906}
   - component: {fileID: 114426635712728678}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: RopePart_5 (2)
   m_TagString: Cutable
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 54809676154379302}
   - component: {fileID: 144953298042178808}
   - component: {fileID: 114277091351995938}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: RopePart_1
   m_TagString: Cutable
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 54544191163905688}
   - component: {fileID: 144656888526483230}
   - component: {fileID: 114137709977603720}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: RopePart_5 (3)
   m_TagString: Cutable
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 54225806539572046}
   - component: {fileID: 144614906430987192}
   - component: {fileID: 114116906483101454}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: RopePart_5 (6)
   m_TagString: Cutable
   m_Icon: {fileID: 0}
@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 54805424570023532}
   - component: {fileID: 144675744918373338}
   - component: {fileID: 114674681372989624}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: RopePart_5 (1)
   m_TagString: Cutable
   m_Icon: {fileID: 0}
@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 54137931861984078}
   - component: {fileID: 144629544235110002}
   - component: {fileID: 114683111283483334}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: RopePart_5
   m_TagString: Cutable
   m_Icon: {fileID: 0}
@@ -281,7 +281,7 @@ GameObject:
   - component: {fileID: 54820310525216454}
   - component: {fileID: 144742718757755356}
   - component: {fileID: 114449323124007292}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: RopePart_4
   m_TagString: Cutable
   m_Icon: {fileID: 0}
@@ -304,7 +304,7 @@ GameObject:
   - component: {fileID: 144855423684041894}
   - component: {fileID: 144289395725014210}
   - component: {fileID: 114484553033215226}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: RopePart end
   m_TagString: Cutable
   m_Icon: {fileID: 0}
@@ -326,7 +326,7 @@ GameObject:
   - component: {fileID: 54046992605294070}
   - component: {fileID: 144711322977355600}
   - component: {fileID: 114820943322004054}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: RopePart_3
   m_TagString: Cutable
   m_Icon: {fileID: 0}
@@ -405,7 +405,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1807930554556536}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -0.291, y: 1.171, z: 13.129}
+  m_LocalPosition: {x: -0.291, y: 1.171, z: 12}
   m_LocalScale: {x: 1.0000005, y: 1, z: 1.0000005}
   m_Children:
   - {fileID: 4584980742915128}
@@ -5123,7 +5123,7 @@ LineRenderer:
       m_Mode: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
-    numCornerVertices: 0
+    numCornerVertices: 90
     numCapVertices: 0
     alignment: 0
     textureMode: 0

@@ -9,6 +9,8 @@ public class FlyController : MonoBehaviour {
     [Range(45,65)]
     public float speed;
 
+    private AudioSource BruitDeMouche;
+
     private int randomTime;
     private float randomSpeed;
     private int randomPoint;
@@ -20,6 +22,7 @@ public class FlyController : MonoBehaviour {
     {
         vivante = true;
         rb = GetComponent<Rigidbody>();
+        BruitDeMouche = GetComponent<AudioSource>();
         StartCoroutine(SpeedChange());
     }
 
@@ -29,10 +32,6 @@ public class FlyController : MonoBehaviour {
         if (vivante)
         {
             Rotate();
-        }
-        else
-        {
-            Kill();
         }
     }
 
@@ -48,15 +47,9 @@ public class FlyController : MonoBehaviour {
     void Rotate()
     {
         Vector3 move = new Vector3(0,0,transform.position.z) + new Vector3(transform.position.x, 0, 0);
-        Debug.Log(move);
+        //Debug.Log(move);
         transform.RotateAround(rotatePoint.position, Vector3.up, speed * Time.deltaTime);
         transform.localRotation = Quaternion.LookRotation(move);
-    }
-
-    void Kill()
-    {
-        rb.isKinematic = false;
-        rb.useGravity = true;
     }
 
     private void OnDrawGizmos()
@@ -70,6 +63,9 @@ public class FlyController : MonoBehaviour {
         if (other.gameObject.CompareTag("Tapette"))
         {
             vivante = false;
+            rb.isKinematic = false;
+            rb.useGravity = true;
+            BruitDeMouche.Stop();
         }
     }
 }

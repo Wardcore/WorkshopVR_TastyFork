@@ -29,12 +29,13 @@ public class Timer : MonoBehaviour {
     [Header("AnimationRobot")]
     public Animator robot_animator;
     [Space]
+    [Header("SoundPlusDeTemps")]
+    public AudioSource Tictictic;
+    [Space]
     [Header("Debug")]
     public Material red;
     public Material orange;
     public GameObject g_clock;
-    public AudioSource Tictictic;
-
     private float timeleft;
     private float timepercentage;
     public float timeMax;

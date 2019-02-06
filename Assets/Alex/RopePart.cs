@@ -43,6 +43,7 @@ public class RopePart : MonoBehaviour {
 		lineTemp.startWidth = m_parent.m_lineSize;
 		lineTemp.endWidth = m_parent.m_lineSize;
 		lineTemp.material = m_parent.m_lineMat;
+		lineTemp.numCornerVertices = 90;
 
 		//lineTemp.SetPositions(m_parent.SetLine(ID));
 	}
