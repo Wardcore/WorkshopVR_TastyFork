@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using VRTK;
+using UnityEngine.SceneManagement;
 
 public enum HandConfigs{
 	Rest = 0,
@@ -19,12 +20,27 @@ public class InputManager : MonoBehaviour {
 	public HandConfigs m_leftConfig;
 	public HandConfigs m_rightConfig;
 
+	void Start()
+	{
+		
+	}
 
 	// Update is called once per frame
 	void Update () 
 	{
 		m_leftConfig = SetConfig(m_leftEvent);
 		m_rightConfig = SetConfig(m_rightEvent);
+
+		if(m_leftEvent.buttonOnePressed && m_leftEvent.buttonTwoPressed && m_rightEvent.buttonOnePressed && m_rightEvent.buttonTwoPressed){
+			SceneManager.LoadScene("Showcase Alex", LoadSceneMode.Single);
+			SceneManager.LoadScene("Example_Interactions Alex", LoadSceneMode.Additive);
+		}
+		if(m_leftEvent.gripTouched || m_rightEvent.gripTouched){
+			print("grip touched");
+		}
+		if(m_leftEvent.triggerTouched || m_rightEvent.triggerTouched){
+			print("trigger touched");
+		}
 	}
 
 	private HandConfigs SetConfig(VRTK_ControllerEvents InputEvent){
