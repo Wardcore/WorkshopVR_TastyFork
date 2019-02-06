@@ -31,7 +31,7 @@ public class CustomPhysicsSlider : VRTK_PhysicsSlider {
         processAtEndOfFrame = StartCoroutine(ProcessAtEndOfFrame());
         SetupRigidbody();
         SetupRigidbodyActivator();
-        if(isBroken){
+        if(!isBroken){
             SetupInteractableObject();
             SetupJoint();
             previousLocalPosition = Vector3.one * float.MaxValue;
@@ -61,6 +61,7 @@ public class CustomPhysicsSlider : VRTK_PhysicsSlider {
     void OnJointBreak(float breakForce)
     {
         isBroken= true;
+        //Destro
         Debug.Log("A joint has just been broken!, force: " + breakForce);
     }
 }
