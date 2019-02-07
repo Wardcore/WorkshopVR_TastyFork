@@ -10,8 +10,8 @@ public class HandChecker : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("BoxHandCode"))
         {
-            CodeController.instance.OncheckHand(HandValue);
             CodeController.instance.OnboolCheck(true);
+            CodeController.instance.OncheckHand(HandValue);
         }
     }
     private void OnTriggerExit(Collider other)
