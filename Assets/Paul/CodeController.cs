@@ -4,27 +4,23 @@ using UnityEngine;
 
 public class CodeController : MonoBehaviour {
 
-    #region Singleton
-    public static CodeController instance;
-
-    private void Awake()
-    {
-        instance = this;
-    }
-    #endregion
-
     public Material[] material;
     public string code;
-
+    private AudioSource analyse;
+    public GameObject shader;
+    //public AnimationCurve plot = new AnimationCurve();
     private GameObject[] main;
     private int countEnter;
     private bool go;
     private string handCode;
     private bool rightcode;
+    private float timewait;
+    private float timewaitShader;
+    private int HandedHand;
     private void Start()
     {
         countEnter = -1;
-        
+        analyse = gameObject.GetComponent<AudioSource>();
         main = new GameObject[transform.childCount];
         int i = 0;
         foreach(Transform child in transform)
@@ -36,20 +32,65 @@ public class CodeController : MonoBehaviour {
         {
             main[b].GetComponent<Renderer>().material = material[0];
         }
-        Debug.Log(main.Length);
+    }
+    private void Update()
+    {
+        if (go && shader.activeSelf)
+        {
+            timewaitShader = 0;
+            timewait += Time.deltaTime;
+            if(timewait >= analyse.clip.length)
+            {
+                OnCheckHandCode();
+                timewait = 0;
+            }
+        }
+        else
+        {
+            timewait = 0;
+        }
+
+        if(!go && !shader.activeSelf)
+        {
+            timewaitShader += Time.deltaTime;
+            if(timewaitShader >= 1)
+            {
+                WaitFadeOut();
+            }
+        }
+    }
+    public void OnboolCheck(bool b)
+    {
+        go = b;
+        if (go && shader.activeSelf)
+        {
+            analyse.Play();
+            analyse.volume = 1f;
+        }
+        else
+        {
+            analyse.Stop();
+        }
     }
 
-    public void OncheckHand(int Hand)
+    void WaitFadeOut()
+    {
+        shader.SetActive(true);
+    }
+
+    public void OnCheckHandCode()
     {
         if (go && !rightcode)
         {
             countEnter++;
-            handCode = handCode + Hand;
-            if (countEnter < main.Length-1)
+            handCode = handCode + HandedHand;
+            shader.SetActive(false);
+            timewait = 0;
+            if (countEnter < main.Length - 1)
             {
                 main[countEnter].GetComponent<Renderer>().material = material[2];
             }
-            else if(countEnter == main.Length - 1)
+            else if (countEnter == main.Length - 1)
             {
                 main[countEnter].GetComponent<Renderer>().material = material[2];
                 countEnter = -1;
@@ -57,12 +98,10 @@ public class CodeController : MonoBehaviour {
             }
         }
     }
-
-    public void OnboolCheck(bool b)
+    public void OncheckHand(int Hand)
     {
-        go = b;
+        HandedHand = Hand;
     }
-
     IEnumerator OnWaitForCheck(string CheckCode)
     {
         if(CheckCode == code)
