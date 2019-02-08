@@ -19,6 +19,8 @@ public class HandConfig : MonoBehaviour {
     public int HandValue;
 	private VRTK_ControllerEvents m_Event;
 
+	private HandConfigs m_configOld;
+
     /// <summary>
     /// Start is called on the frame when a script is enabled just before
     /// any of the Update methods is called the first time.
@@ -38,10 +40,20 @@ public class HandConfig : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("BoxHandCode"))
         {
-			other.GetComponent<CodeController>().OncheckHand((int)m_Config);
 			other.GetComponent<CodeController>().OnboolCheck(true);
+			other.GetComponent<CodeController>().OncheckHand((int)m_Config);
         }
     }
+
+	/// <summary>
+	/// OnTriggerStay is called once per frame for every Collider other
+	/// that is touching the trigger.
+	/// </summary>
+	/// <param name="other">The other Collider involved in this collision.</param>
+	void OnTriggerStay(Collider other)
+	{
+		
+	}
 
     private void OnTriggerExit(Collider other)
     {

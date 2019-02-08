@@ -46,7 +46,6 @@ public class CustomPhysicsSlider : VRTK_PhysicsSlider {
     }*/
 
     protected override void OnDisable(){
-        print("disable");
         storedValue = GetValue();
         ManageInteractableObjectListeners(false);
         if (createControlJoint)

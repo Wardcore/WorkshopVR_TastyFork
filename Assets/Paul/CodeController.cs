@@ -20,7 +20,7 @@ public class CodeController : MonoBehaviour {
     private int countEnter;
     private bool go;
     private string handCode;
-    private bool rightcode;
+    private bool rightcode = false;
     private void Start()
     {
         countEnter = -1;
@@ -36,11 +36,12 @@ public class CodeController : MonoBehaviour {
         {
             main[b].GetComponent<Renderer>().material = material[0];
         }
-        Debug.Log(main.Length);
+        //Debug.Log(main.Length);
     }
 
     public void OncheckHand(int Hand)
     {
+        print("check hand");
         if (go && !rightcode)
         {
             countEnter++;
@@ -67,6 +68,7 @@ public class CodeController : MonoBehaviour {
     {
         if(CheckCode == code)
         {
+            print("CodeChecked");
             rightcode = true;
         }
         yield return new WaitForSeconds(1f);
