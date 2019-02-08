@@ -35,6 +35,6 @@ public class Lighter : MonoBehaviour {
 
 	protected virtual void InteractableObjectUnused(object sender, InteractableObjectEventArgs e)
     {
-		m_flame.SetActive(false);
+		//m_flame.SetActive(false);
     }
 }

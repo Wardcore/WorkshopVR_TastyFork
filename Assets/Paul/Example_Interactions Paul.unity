@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028478, g: 0.22571515, b: 0.30692366, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4631,6 +4631,55 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4284849433887702, guid: 8d1ca14cc1fa29b4bb278968b222ab11,
     type: 2}
   m_PrefabInternal: {fileID: 453362672}
+<<<<<<< HEAD
+=======
+--- !u!1 &456807098
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 456807099}
+  - component: {fileID: 456807100}
+  m_Layer: 0
+  m_Name: CodeController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &456807099
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 456807098}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &456807100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 456807098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ada7651922f45140a88557ef2c0b46d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material:
+  - {fileID: 2100000, guid: c49289ace4ca68647b41714e53fa561e, type: 2}
+  - {fileID: 2100000, guid: d134c435294343049a9fa4a51fbbdf72, type: 2}
+  - {fileID: 2100000, guid: 0964c6d53eb993245a337e8d1e29a854, type: 2}
+  - {fileID: 2100000, guid: 40d399170c9ba7740ba9208fb898e435, type: 2}
+  code: 4214
+>>>>>>> 7b91dab4350485f23f017999f8abcd30bc0b7ea7
 --- !u!1 &465166460
 GameObject:
   m_ObjectHideFlags: 0
@@ -23164,8 +23213,11 @@ GameObject:
   - component: {fileID: 2055385215}
   - component: {fileID: 2055385214}
   - component: {fileID: 2055385216}
+<<<<<<< HEAD
   - component: {fileID: 2055385218}
   - component: {fileID: 2055385212}
+=======
+>>>>>>> 7b91dab4350485f23f017999f8abcd30bc0b7ea7
   - component: {fileID: 2055385217}
   m_Layer: 0
   m_Name: BoxHand
@@ -23229,7 +23281,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 64e9c0814b0f8784789f2ca5c701371c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -23271,6 +23323,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+<<<<<<< HEAD
 --- !u!82 &2055385217
 AudioSource:
   m_ObjectHideFlags: 0
@@ -23368,6 +23421,9 @@ AudioSource:
     m_PostInfinity: 2
     m_RotationOrder: 4
 --- !u!114 &2055385218
+=======
+--- !u!114 &2055385217
+>>>>>>> 7b91dab4350485f23f017999f8abcd30bc0b7ea7
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -23384,7 +23440,10 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 0964c6d53eb993245a337e8d1e29a854, type: 2}
   - {fileID: 2100000, guid: 40d399170c9ba7740ba9208fb898e435, type: 2}
   code: 4214
+<<<<<<< HEAD
   shader: {fileID: 228760850}
+=======
+>>>>>>> 7b91dab4350485f23f017999f8abcd30bc0b7ea7
 --- !u!1001 &2062565462
 Prefab:
   m_ObjectHideFlags: 0

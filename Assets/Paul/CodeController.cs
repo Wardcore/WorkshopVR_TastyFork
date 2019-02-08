@@ -13,10 +13,14 @@ public class CodeController : MonoBehaviour {
     private int countEnter;
     private bool go;
     private string handCode;
+<<<<<<< HEAD
     private bool rightcode;
     private float timewait;
     private float timewaitShader;
     private int HandedHand;
+=======
+    private bool rightcode = false;
+>>>>>>> 7b91dab4350485f23f017999f8abcd30bc0b7ea7
     private void Start()
     {
         countEnter = -1;
@@ -32,6 +36,10 @@ public class CodeController : MonoBehaviour {
         {
             main[b].GetComponent<Renderer>().material = material[0];
         }
+<<<<<<< HEAD
+=======
+        //Debug.Log(main.Length);
+>>>>>>> 7b91dab4350485f23f017999f8abcd30bc0b7ea7
     }
     private void Update()
     {
@@ -80,6 +88,7 @@ public class CodeController : MonoBehaviour {
 
     public void OnCheckHandCode()
     {
+        print("check hand");
         if (go && !rightcode)
         {
             countEnter++;
@@ -106,6 +115,7 @@ public class CodeController : MonoBehaviour {
     {
         if(CheckCode == code)
         {
+            print("CodeChecked");
             rightcode = true;
         }
         yield return new WaitForSeconds(1f);
