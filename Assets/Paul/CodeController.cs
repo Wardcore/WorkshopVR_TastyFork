@@ -8,19 +8,15 @@ public class CodeController : MonoBehaviour {
     public string code;
     private AudioSource analyse;
     public GameObject shader;
-    //public AnimationCurve plot = new AnimationCurve();
     private GameObject[] main;
     private int countEnter;
     private bool go;
     private string handCode;
-<<<<<<< HEAD
     private bool rightcode;
     private float timewait;
     private float timewaitShader;
     private int HandedHand;
-=======
-    private bool rightcode = false;
->>>>>>> 7b91dab4350485f23f017999f8abcd30bc0b7ea7
+
     private void Start()
     {
         countEnter = -1;
@@ -36,10 +32,6 @@ public class CodeController : MonoBehaviour {
         {
             main[b].GetComponent<Renderer>().material = material[0];
         }
-<<<<<<< HEAD
-=======
-        //Debug.Log(main.Length);
->>>>>>> 7b91dab4350485f23f017999f8abcd30bc0b7ea7
     }
     private void Update()
     {
@@ -61,7 +53,7 @@ public class CodeController : MonoBehaviour {
         if(!go && !shader.activeSelf)
         {
             timewaitShader += Time.deltaTime;
-            if(timewaitShader >= 1)
+            if(timewaitShader >= 1f)
             {
                 WaitFadeOut();
             }
@@ -84,6 +76,7 @@ public class CodeController : MonoBehaviour {
     void WaitFadeOut()
     {
         shader.SetActive(true);
+        timewaitShader = 0;
     }
 
     public void OnCheckHandCode()
