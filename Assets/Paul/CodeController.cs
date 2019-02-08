@@ -16,7 +16,6 @@ public class CodeController : MonoBehaviour {
     private float timewait;
     private float timewaitShader;
     private int HandedHand;
-
     private void Start()
     {
         countEnter = -1;
