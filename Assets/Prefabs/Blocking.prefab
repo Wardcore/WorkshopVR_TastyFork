@@ -900,6 +900,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 127
   m_IsActive: 1
+--- !u!1 &1132508272902202
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4059027393020478}
+  m_Layer: 0
+  m_Name: PorteBibli
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1136182062036432
 GameObject:
   m_ObjectHideFlags: 1
@@ -8401,6 +8416,20 @@ Transform:
   m_Father: {fileID: 4944686661173726}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4059027393020478
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1132508272902202}
+  m_LocalRotation: {x: -0.000000057601152, y: -0.7071069, z: -0.000000057601174, w: 0.7071067}
+  m_LocalPosition: {x: -0.653, y: -6.64, z: 0}
+  m_LocalScale: {x: 7.6028547, y: 7.6028547, z: 0.7526907}
+  m_Children:
+  - {fileID: 4936844792077252}
+  m_Father: {fileID: 4808254833675750}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4061902935972998
 Transform:
   m_ObjectHideFlags: 1
@@ -13165,8 +13194,8 @@ Transform:
   m_LocalPosition: {x: -10.853846, y: 1.3255086, z: -0.14227533}
   m_LocalScale: {x: 1.328567, y: 0.13152954, z: 0.13152954}
   m_Children:
-  - {fileID: 4936844792077252}
   - {fileID: 4848725023148328}
+  - {fileID: 4059027393020478}
   - {fileID: 4198095808301134}
   m_Father: {fileID: 4526555527351894}
   m_RootOrder: 11
@@ -13468,7 +13497,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4808254833675750}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: -180}
 --- !u!4 &4851911868133538
 Transform:
@@ -13972,11 +14001,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1424796981469122}
-  m_LocalRotation: {x: -0, y: -0.00000017881393, z: -3.5527137e-15, w: 1}
-  m_LocalPosition: {x: -0.037, y: 0.12, z: -0.04}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.00000005760116, y: 0.70710677, z: 0.00000005760116, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.865, z: -0.86}
+  m_LocalScale: {x: 1.328567, y: 0.13152954, z: 0.13152954}
   m_Children: []
-  m_Father: {fileID: 4808254833675750}
+  m_Father: {fileID: 4059027393020478}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
 --- !u!4 &4939754923418348
@@ -24916,7 +24945,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!54 &54590377755767310
 Rigidbody:
   m_ObjectHideFlags: 1

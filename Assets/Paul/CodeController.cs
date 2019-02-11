@@ -8,6 +8,7 @@ public class CodeController : MonoBehaviour {
     public string code;
     private AudioSource analyse;
     public GameObject shader;
+    public Animator anim;
     private GameObject[] main;
     private int countEnter;
     private bool go;
@@ -34,7 +35,7 @@ public class CodeController : MonoBehaviour {
     }
     private void Update()
     {
-        if (go && shader.activeSelf)
+        if (go && shader.activeSelf && !rightcode)
         {
             timewaitShader = 0;
             timewait += Time.deltaTime;
@@ -49,7 +50,7 @@ public class CodeController : MonoBehaviour {
             timewait = 0;
         }
 
-        if(!go && !shader.activeSelf)
+        if(!go && !shader.activeSelf && !rightcode)
         {
             timewaitShader += Time.deltaTime;
             if(timewaitShader >= 1f)
@@ -61,7 +62,7 @@ public class CodeController : MonoBehaviour {
     public void OnboolCheck(bool b)
     {
         go = b;
-        if (go && shader.activeSelf)
+        if (go && shader.activeSelf && !rightcode)
         {
             analyse.Play();
             analyse.volume = 1f;
@@ -116,6 +117,7 @@ public class CodeController : MonoBehaviour {
             if(rightcode)
             {
                 main[i].GetComponent<Renderer>().material = material[1];
+                anim.SetBool("RightCode", true);
             }
             else
             {

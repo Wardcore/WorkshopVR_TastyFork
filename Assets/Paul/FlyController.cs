@@ -46,10 +46,10 @@ public class FlyController : MonoBehaviour {
 
     void Rotate()
     {
-        Vector3 move = new Vector3(0,0,transform.position.z) + new Vector3(transform.position.x, 0, 0);
+        //Vector3 move = new Vector3(0,0,transform.position.z) + new Vector3(transform.position.x, 0, 0);
         //Debug.Log(move);
         transform.RotateAround(rotatePoint.position, Vector3.up, speed * Time.deltaTime);
-        transform.localRotation = Quaternion.LookRotation(move);
+        //transform.localRotation = Quaternion.LookRotation(move);
     }
 
     private void OnDrawGizmos()
