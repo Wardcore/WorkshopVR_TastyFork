@@ -29,8 +29,11 @@ public class Timer : MonoBehaviour {
     [Header("AnimationRobot")]
     public Animator robot_animator;
     [Space]
-    [Header("SoundPlusDeTemps")]
+    [Header("SoundAPlusDeTemps")]
     public AudioSource Tictictic;
+    [Space]
+    [Header("SonAmbianceBombe3D")]
+    public AudioSource Tactactac;
     [Space]
     [Header("Debug")]
     public Material red;
@@ -40,6 +43,7 @@ public class Timer : MonoBehaviour {
     private float timepercentage;
     public float timeMax;
     private int counterModul;
+    private bool go;
 
     private const float secondsToDegrees = 360f;
 
@@ -54,6 +58,14 @@ public class Timer : MonoBehaviour {
     }
 
     void FixedUpdate()
+    {
+        if (go)
+        {
+            OnTimeFlying();
+        }
+    }
+
+    void OnTimeFlying()
     {
         timeleft -= Time.deltaTime;
         int ticTimeLeft = Mathf.FloorToInt(timeleft);
@@ -78,17 +90,29 @@ public class Timer : MonoBehaviour {
 
         if (timepercentage < timerpercent)
         {
-            if (Tictictic != null)
+            if (Tictictic != null && Tactactac != null)
             {
-                Tictictic.Play();
+                if (!Tictictic.isPlaying)
+                {
+
+                    Tictictic.Play();
+                    Tactactac.Stop();
+
+                }
             }
             g_clock.GetComponent<Renderer>().material = red;
         }
         else
         {
-            if (Tictictic != null)
+            if (Tictictic != null && Tactactac != null)
             {
-                Tictictic.Stop();
+                if (!Tactactac.isPlaying)
+                {
+
+                    Tictictic.Stop();
+                    Tactactac.Play();
+
+                }
             }
             g_clock.GetComponent<Renderer>().material = orange;
         }
@@ -112,5 +136,10 @@ public class Timer : MonoBehaviour {
     void OnForkRevealed()
     {
         //robot_animator.Play("Robot");
+    }
+
+    public void OnRedButton(bool goBombe)
+    {
+        go = goBombe;
     }
 }

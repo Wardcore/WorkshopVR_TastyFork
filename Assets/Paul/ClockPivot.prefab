@@ -142,8 +142,10 @@ MonoBehaviour:
   timeBonus: 40
   timerpercent: 0.25
   left: 1
+  robot_animator: {fileID: 0}
+  Tictictic: {fileID: 0}
+  Tactactac: {fileID: 0}
   red: {fileID: 2100000, guid: 40d399170c9ba7740ba9208fb898e435, type: 2}
   orange: {fileID: 2100000, guid: 0964c6d53eb993245a337e8d1e29a854, type: 2}
   g_clock: {fileID: 1708643434795622}
-  Tictictic: {fileID: 0}
   timeMax: 0
