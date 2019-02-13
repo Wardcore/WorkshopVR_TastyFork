@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using VRTK;
 public class FlyController : MonoBehaviour {
 
     public Transform rotatePoint;
@@ -17,12 +17,15 @@ public class FlyController : MonoBehaviour {
 
     private bool vivante;
     private Rigidbody rb;
+    private VRTK_InteractableObject m_interact;
 
     private void Start()
     {
         vivante = true;
         rb = GetComponent<Rigidbody>();
         BruitDeMouche = GetComponent<AudioSource>();
+        m_interact = GetComponent<VRTK_InteractableObject>();
+        m_interact.enabled = false;
         StartCoroutine(SpeedChange());
     }
 
@@ -62,10 +65,13 @@ public class FlyController : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Tapette"))
         {
+            m_interact.enabled = true;
             vivante = false;
             rb.isKinematic = false;
             rb.useGravity = true;
-            BruitDeMouche.Stop();
+            if(BruitDeMouche)
+                BruitDeMouche.Stop();
+            Destroy(this);
         }
     }
 }

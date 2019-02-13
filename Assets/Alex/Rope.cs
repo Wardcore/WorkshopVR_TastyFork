@@ -8,6 +8,10 @@ public class Rope : MonoBehaviour {
 	public float m_lineSize = 0.02f;
 	private LineRenderer m_line;
     public int m_childCount;
+	
+    public delegate void RopeCut(object sender);
+	public event RopeCut RopeCutEvent;
+
 	void  Awake() 
 	{
 		m_line = GetComponent<LineRenderer>();
@@ -54,6 +58,15 @@ public class Rope : MonoBehaviour {
 		foreach (Transform child in transform)
 		{
 			child.GetComponent<Collider>().enabled = false;
+		}
+		OnRopeCut();
+	}
+
+	public virtual void OnRopeCut()
+	{
+		if (RopeCutEvent != null)
+		{
+			RopeCutEvent(this);
 		}
 	}
 

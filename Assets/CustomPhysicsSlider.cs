@@ -81,6 +81,7 @@ public class CustomPhysicsSlider : VRTK_PhysicsSlider {
         controlRigidbody.collisionDetectionMode = CollisionDetectionMode.Discrete;
         controlRigidbody.constraints = RigidbodyConstraints.None;
     }
+    
     public void LimitBreak(){
         Debug.Log("Limit reach");
         SetupRBforinteractable();

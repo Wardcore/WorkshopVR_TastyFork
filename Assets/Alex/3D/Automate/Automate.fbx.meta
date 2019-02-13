@@ -1,0 +1,242 @@
+fileFormatVersion: 2
+guid: ca65f06aab9d3ef4f926699d81270f80
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: automaton
+    100004: avant_bars_gauche
+    100006: avant_bras_droit
+    100008: boite_cranienne
+    100010: bras_droit
+    100012: bras_gauche
+    100014: bras_gauche 1
+    100016: cerveau_central
+    100018: cerveau_engrenage_1
+    100020: cerveau_engrenage_2
+    100022: cerveau_engrenage_3
+    100024: cerveau_engrenage_4
+    100026: cerveau_engrenage_5
+    100028: cerveau_engrenage_6
+    100030: cerveau_engrenage_7
+    100032: cloche_armature
+    100034: cloche_vitre
+    100036: colonne
+    100038: cotes
+    100040: cou
+    100042: crane
+    100044: crane1
+    100046: epaule_droite
+    100048: epaule_gauche
+    100050: epaulette_droite
+    100052: epaulette_gauche
+    100054: oreilles
+    100056: organes_rouage
+    100058: socle
+    100060: torse
+    100062: visage
+    100064: yeux
+    400000: //RootNode
+    400002: automaton
+    400004: avant_bars_gauche
+    400006: avant_bras_droit
+    400008: boite_cranienne
+    400010: bras_droit
+    400012: bras_gauche
+    400014: bras_gauche 1
+    400016: cerveau_central
+    400018: cerveau_engrenage_1
+    400020: cerveau_engrenage_2
+    400022: cerveau_engrenage_3
+    400024: cerveau_engrenage_4
+    400026: cerveau_engrenage_5
+    400028: cerveau_engrenage_6
+    400030: cerveau_engrenage_7
+    400032: cloche_armature
+    400034: cloche_vitre
+    400036: colonne
+    400038: cotes
+    400040: cou
+    400042: crane
+    400044: crane1
+    400046: epaule_droite
+    400048: epaule_gauche
+    400050: epaulette_droite
+    400052: epaulette_gauche
+    400054: oreilles
+    400056: organes_rouage
+    400058: socle
+    400060: torse
+    400062: visage
+    400064: yeux
+    2100000: lambert1
+    2100002: vitre
+    2300000: avant_bars_gauche
+    2300002: avant_bras_droit
+    2300004: boite_cranienne
+    2300006: bras_droit
+    2300008: bras_gauche 1
+    2300010: cerveau_central
+    2300012: cerveau_engrenage_1
+    2300014: cerveau_engrenage_2
+    2300016: cerveau_engrenage_3
+    2300018: cerveau_engrenage_4
+    2300020: cerveau_engrenage_5
+    2300022: cerveau_engrenage_6
+    2300024: cerveau_engrenage_7
+    2300026: cloche_armature
+    2300028: cloche_vitre
+    2300030: colonne
+    2300032: cotes
+    2300034: cou
+    2300036: crane1
+    2300038: epaule_droite
+    2300040: epaule_gauche
+    2300042: epaulette_droite
+    2300044: epaulette_gauche
+    2300046: oreilles
+    2300048: organes_rouage
+    2300050: socle
+    2300052: torse
+    2300054: visage
+    2300056: yeux
+    3300000: avant_bars_gauche
+    3300002: avant_bras_droit
+    3300004: boite_cranienne
+    3300006: bras_droit
+    3300008: bras_gauche 1
+    3300010: cerveau_central
+    3300012: cerveau_engrenage_1
+    3300014: cerveau_engrenage_2
+    3300016: cerveau_engrenage_3
+    3300018: cerveau_engrenage_4
+    3300020: cerveau_engrenage_5
+    3300022: cerveau_engrenage_6
+    3300024: cerveau_engrenage_7
+    3300026: cloche_armature
+    3300028: cloche_vitre
+    3300030: colonne
+    3300032: cotes
+    3300034: cou
+    3300036: crane1
+    3300038: epaule_droite
+    3300040: epaule_gauche
+    3300042: epaulette_droite
+    3300044: epaulette_gauche
+    3300046: oreilles
+    3300048: organes_rouage
+    3300050: socle
+    3300052: torse
+    3300054: visage
+    3300056: yeux
+    4300000: cloche_armature
+    4300002: cerveau_central
+    4300004: bras_gauche
+    4300006: bras_droit
+    4300008: torse
+    4300010: colonne
+    4300012: organes_rouage
+    4300014: visage
+    4300016: boite_cranienne
+    4300018: cou
+    4300020: cotes
+    4300022: socle
+    4300024: cloche_vitre
+    4300026: cerveau_engrenage_1
+    4300028: cerveau_engrenage_3
+    4300030: cerveau_engrenage_4
+    4300032: cerveau_engrenage_6
+    4300034: cerveau_engrenage_7
+    4300036: cerveau_engrenage_5
+    4300038: cerveau_engrenage_2
+    4300040: crane1
+    4300042: yeux
+    4300044: oreilles
+    4300046: epaulette_droite
+    4300048: epaule_droite
+    4300050: avant_bras_droit
+    4300052: epaulette_gauche
+    4300054: epaule_gauche
+    4300056: avant_bars_gauche
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

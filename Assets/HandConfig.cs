@@ -14,9 +14,9 @@ public enum HandConfigs{
 
 public class HandConfig : MonoBehaviour {
 	
-
+	public bool m_isStatic = false;
 	public HandConfigs m_Config;
-    public int HandValue;
+    //public int HandValue;
 	private VRTK_ControllerEvents m_Event;
 
 	private HandConfigs m_configOld;
@@ -33,7 +33,8 @@ public class HandConfig : MonoBehaviour {
 
 	void Update () 
 	{
-		m_Config = SetConfig(m_Event);
+		if(!m_isStatic)
+			m_Config = SetConfig(m_Event);
     }
 	
     private void OnTriggerEnter(Collider other)
@@ -43,17 +44,12 @@ public class HandConfig : MonoBehaviour {
 			other.GetComponent<CodeController>().OnboolCheck(true);
 			other.GetComponent<CodeController>().OncheckHand((int)m_Config);
         }
+        if (other.gameObject.CompareTag("CheckAndroid"))
+        {
+            if(other.GetComponent<CheckDetection>().m_requiredConfig == m_Config)
+                other.GetComponent<CheckDetection>().SetOnValidCheckDetection();
+        }
     }
-
-	/// <summary>
-	/// OnTriggerStay is called once per frame for every Collider other
-	/// that is touching the trigger.
-	/// </summary>
-	/// <param name="other">The other Collider involved in this collision.</param>
-	void OnTriggerStay(Collider other)
-	{
-		
-	}
 
     private void OnTriggerExit(Collider other)
     {
@@ -103,7 +99,7 @@ public class HandConfig : MonoBehaviour {
 				configs = HandConfigs.OKHand;
 			}
 		}
-		HandValue = (int)configs;
+		//HandValue = (int)configs;
 		return configs;
 	}
 }
