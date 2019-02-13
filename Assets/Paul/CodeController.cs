@@ -81,7 +81,6 @@ public class CodeController : MonoBehaviour {
 
     public void OnCheckHandCode()
     {
-        print("check hand");
         if (go && !rightcode)
         {
             countEnter++;
@@ -108,7 +107,7 @@ public class CodeController : MonoBehaviour {
     {
         if(CheckCode == code)
         {
-            print("CodeChecked");
+            //print("CodeChecked");
             rightcode = true;
         }
         yield return new WaitForSeconds(1f);
