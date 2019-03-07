@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VRTK;
 
 public class CodeController : MonoBehaviour {
 
@@ -9,6 +10,7 @@ public class CodeController : MonoBehaviour {
     private AudioSource analyse;
     public GameObject shader;
     public Animator anim;
+    public VRTK_InteractableObject tapette;
     private GameObject[] main;
     private int countEnter;
     private bool go;
@@ -19,6 +21,8 @@ public class CodeController : MonoBehaviour {
     private int HandedHand;
     private void Start()
     {
+        
+        tapette.enabled = false;
         countEnter = -1;
         analyse = gameObject.GetComponent<AudioSource>();
         main = new GameObject[transform.childCount];
@@ -116,6 +120,7 @@ public class CodeController : MonoBehaviour {
             if(rightcode)
             {
                 main[i].GetComponent<Renderer>().material = material[1];
+                tapette.enabled = true;
                 anim.SetBool("RightCode", true);
             }
             else

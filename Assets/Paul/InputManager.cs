@@ -32,8 +32,8 @@ public class InputManager : MonoBehaviour {
 		//m_rightConfig = SetConfig(m_rightEvent);
 
 		if(m_leftEvent.buttonOnePressed && m_leftEvent.buttonTwoPressed && m_rightEvent.buttonOnePressed && m_rightEvent.buttonTwoPressed){
-			SceneManager.LoadScene("Showcase Alex", LoadSceneMode.Single);
-			SceneManager.LoadScene("Example_Interactions Alex", LoadSceneMode.Additive);
+			//SceneManager.LoadScene("Showcase Alex", LoadSceneMode.Single);
+			SceneManager.LoadScene("Example_Interactions Alex", LoadSceneMode.Single);
 		}
 		/*if(m_leftEvent.gripTouched || m_rightEvent.gripTouched){
 			print("grip touched");

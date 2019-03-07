@@ -100,7 +100,7 @@ public class Timer : MonoBehaviour {
 
                 }
             }
-            g_clock.GetComponent<Renderer>().material = red;
+            //g_clock.GetComponent<Renderer>().material = red;
         }
         else
         {
@@ -114,7 +114,7 @@ public class Timer : MonoBehaviour {
 
                 }
             }
-            g_clock.GetComponent<Renderer>().material = orange;
+            //g_clock.GetComponent<Renderer>().material = orange;
         }
     }
 

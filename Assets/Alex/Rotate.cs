@@ -5,8 +5,10 @@ using UnityEngine;
 public class Rotate : MonoBehaviour {
 
 	public float speed;
-	
+
+	public bool rotate = true;
 	void Update () {
-		transform.Rotate(0,-speed,0);
+		if(rotate)
+			transform.Rotate(0,-speed,0);
 	}
 }
